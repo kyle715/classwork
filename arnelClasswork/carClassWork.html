@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    
+    <h1>Business Name</h1>
+    <p id="businessName"></p>
+        <h3>Cars catagory </h3>
+        <p id="economyCars"> </p>
+            <h3>Economy Cars Available</h3>
+            <p id="eCarsAvail"></p>
+            <h3>Cars Catagory</h3>
+            <p id="midCar"></p>
+            <h3>Mid size cars available</h3>
+            <p id="MidCarAvail"></p>
+                  <button onclick="midSizeAvailable()"> Cars available</button>
+                  <button onclick="rentMidSize()"> rent Mid Size Car</button>
+                  <button onclick="rentEcoSize()"> Rent Economy Size Car</button>
+            </p>
+            <script>
+                var carsAvail = {
+             name: 'Boch Automotive',
+             economyCatagory: 'Economy Cars',
+             economyCars: 200,
+             economyCarsRented: 100,
+             midSizeCatagory: 'Mid Size Cars',
+             midSizeCars: 250, 
+             midSizeCarsRented: 100,
+            
+            midSizeAvailable: function () {
+                return this.midSizeCars - this.midSizeCarsRented;
+                },
+            economyAvailable: function () {
+                return this.economyCars - this.economyCarsRented;
+                },
+            minusEconomy: function () {
+                return this.economyCarsRented -- ;
+            },
+            minusMidSize: function () {
+                return this.midSizeCarsRented -- ;
+                
+            }
+                };
+                
+               document.getElementById("businessName").innerHTML = carsAvail.name;
+               document.getElementById("midCar").innerHTML = carsAvail.midSizeCatagory;
+               document.getElementById("economyCars").innerHTML = carsAvail.economyCatagory;
+               
+  
+            function midSizeAvailable (){
+                document.getElementById("eCarsAvail").innerHTML = carsAvail.economyAvailable();
+                document.getElementById("MidCarAvail").innerHTML = carsAvail.midSizeAvailable();
+            }
+            function rentMidSize (){
+                document.getElementById("MidCarAvail").innerHTML = carsAvail.minusEconomy();
+            }
+            function rentEcoSize (){
+                document.getElementById("eCarsAvail").innerHTML = carsAvail.minusEconomy();
+            }
+                
+            </script>
+            
+               
+</body>
+</html>

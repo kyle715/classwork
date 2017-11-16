@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-    </style>
-</head>
-<body>
-    
-    <h1>Business Name</h1>
-    <p id="businessName"></p>
-        <h3>Cars catagory </h3>
-        <p id="economyCars"> </p>
-            <h3>Economy Cars Available</h3>
-            <p id="eCarsAvail"></p>
-            <h3>Cars Catagory</h3>
-            <p id="midCar"></p>
-            <h3>Mid size cars available</h3>
-            <p id="MidCarAvail"></p>
-                  <button onclick="midSizeAvailable()"> Cars available</button>
-                  <button onclick="rentMidSize()"> rent Mid Size Car</button>
-                  <button onclick="rentEcoSize()"> Rent Economy Size Car</button>
-            </p>
-            <script>
+     
                 var carsAvail = {
              name: 'Boch Automotive',
              economyCatagory: 'Economy Cars',
@@ -44,7 +18,7 @@
                 return this.economyCarsRented -- ;
             },
             minusMidSize: function () {
-                return this.midSizeCarsRented --;
+                return this.midSizeCarsRented -- ;
                 
             }
                 };
@@ -65,8 +39,3 @@
                 document.getElementById("eCarsAvail").innerHTML = carsAvail.minusEconomy();
             }
                 
-            </script>
-            
-               
-</body>
-</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet"
+    href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    
+    
+    
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Six+Caps" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre" rel="stylesheet">
+
+<style>
+    .Blue-text {
+        color:blue;
+    }
+    .red-text {
+        color:red;
+    }
+    .welcome-image{
+        width: 500px;
+        height: 250px;
+    }
+    .ul-class { font-family: Indie Flower;
+        font-size:18px;
+        border: 2px solid blue;
+        width: 700px ;
+        margin-left: 180px ;
+        margin-right: 600px ;
+        margin-top: 0px;
+        margin-bottom:0px;
+        
+        }
+     p { font-family: Averia Serif Libre;
+        font-size:20px;
+        border: 2px solid blue;
+        width: 1100px ;
+        margin-left: 180px ;
+        margin-right: 600px ;
+        padding: 0px;
+        }
+     p1 { font-family: Averia Serif Libre;
+         font-size:20px;
+        border: 2px solid blue;
+        width: 550px ;
+        margin-left: 180px ;
+        margin-right: 600px ;
+        padding: 0px;
+        }
+    p2 {
+         font-size:20px;
+        border: 2px solid blue;
+        width: 700px ;
+        margin-left: 200px ;
+        margin-right: 200px ;
+    }
+    h1{
+        font-family:six caps;
+        font-size:110px;
+    }
+    .silver-background{
+        background-color: floralwhite
+    }
+   #black-text {
+       color:black
+   }
+   .white-text{
+       color:white;
+   }
+    body {
+     background-image:url('http://ktpwebdev.com/wp-content/uploads/2016/09/77-Web-Development-Background.jpg');
+     background-size: 100% 100%;
+    background-repeat:no-repeat;
+    }
+    .p-border-control{
+        border-color:green; 
+        border-width: 40px; border-style: solid;
+    }
+    .boxed {
+      border: 3px solid blue ;
+        width: 800px ;
+        margin-left: 180px ;
+     margin-right: 600px ;
+     }
+    .center {
+    display: block;
+    margin: 0 auto;
+    }
+    .float {
+    float: right;
+    }
+    .button-animation {
+    width: 60px;
+    height: 40px;
+    background-color: blue;
+    position: relative;
+    -webkit-animation-name: color; 
+    -webkit-animation-duration: 6s; 
+    animation-name: color;
+    animation-duration: 6s;
+    font-family: Indie flower;
+    color:white;
+    }
+@keyframes color {
+    0%   {background-color:blue; left:0px; top:0px;}
+    25%  {background-color:purple; left:200px; top:0px;}
+    50%  {background-color:black; left:200px; top:0px;}
+    75%  {background-color:purple; left:0px; top:0px;}
+    100% {background-color:blue; left:0px; top:0px;}
+    }
+    .spin {
+    -webkit-animation:spin 1s;
+    -moz-animation:spin 1s;
+    animation:spin 1s;
+    }
+    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+</style>
+
+      <title>Kyle's Tribute Page</title>
+      
+</head>
+
+<body>
+  
+<id class="black-text"> 
+  <h1 id=black-text class="Blue-text, class-primary, text-center">
+      <u><strong>Welcome to my Tribute Page!</strong></u></h1>
+  </id>
+  <br>
+  <img class="center" src="http://times2.org/wp-content/uploads/2017/03/18.png"
+  alt="my welcome picture for tribute page" class="welcome-image">
+  <br>
+  
+  <!-- welcome intro -->
+  <div>
+       <p class="silver-background"> Hello and welome to my Tribute Page for my new Intracity Geeks class. This is the begining of my trip
+      down 
+       <a href="https://twitter.com/search?q=%23siliconRhode&src=tyah"><p3 class="red-text"><em><u>#siliconRhode</a></em></u></p3>
+      and my first HTML web page im creating for the class! Be sure to click on the siliconRhode link
+       to see what else we are up too!</p>
+       </div>
+       
+<br>
+<br>
+    <!-- Float Image -->
+
+<img class="float" src="http://www.hackpvd.com/img/biophoto-Providence.png"
+  alt="my welcome picture for tribute page" class="welcome-image">
+  
+      <!-- Things im looking forward too -->
+  
+      <p1 class="silver-background"> Here is a list of some things im looking forward to in this class Below! </p1>
+      <div class="ul-class">
+      <ul class="silver-background">
+      <li class="spin"><b> Working with a new team and learning along with them</b></li>
+       <li class="spin"><b>Being able to get into a carrer that has been a long time interest of mine!</b></li>
+        <li class="spin"><b>Challenging myself to learn and grow as an individual</b></li>
+        </ul>
+        </div>
+        
+        <br>
+        <!-- What are you looking forward too -->
+        
+         <div style="text-align:center">  
+ <p2 class=silver-background>What are some things you are looking forward too?</p2>
+ <br>
+ <br>
+ <input type="text" placeholder="Trying to understand it all" required>
+ 
+  <button type="submit" class="button-animation"><b>Submit</b></button>
+</div>
+
+<!-- dropdown menu -->
+
+<div class="container, float">
+
+  <div class="dropdown">
+    <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Links To More Info On The Class
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+        <li><a href="http://intracitygeeks.org/">Intracity Geeks Website</a></li>
+        <li><a href="http://www.hackpvd.com/about.html">Hackathon PVD</a></li>
+    </ul>
+  </div>
+</div>
+<br>
+<br>
+
+    <!-- accomplishments -->
+
+<p1 class="silver-background">Some Things IntraCityGeeks have accomplished so far!</p1>
+
+
+
+<div class="ul-class">
+      <ul class="silver-background">
+      <li class="spin"><b>Spoke with CarrerDevs at Central Falls High School about upcoming Programs and how a carrer in technology can benifit you.</b></li>
+       <li class="spin"><b>Bringing young students to a hackathon at Brown University and showing them how technocolgy can influence their futures</b></li>
+        <li class="spin"><b>Competing in Google's "Code Jam" and their own Hackathons!</b></li>
+        </ul>
+        </div>
+<br>
+
+
+            <!-- Carousel -->
+            
+            <p1 class="silver-background">Here are some images of the team at work!</p1>
+       <div class="row">
+  			<div class="col-md-6 col-md-offset-3 col-xs-12">
+  				<div id="MyCarousel" class="carousel slide" data-ride="carousel"> 
+  		
+  					<ol class="carousel-indicators">
+  						<li data-target="#MyCarousel" data-slide-to="0" class="active"></li>
+  						<li data-target="#MyCarousel" data-slide-to="1"></li>
+  					</ol>
+
+  					<div class="carousel-inner" role="listbox">
+  						<div class="item active">
+  							<img src="http://intracitygeeks.org/wp-content/uploads/2017/04/Pic-of-Cliff-495x400.png" />
+  						
+  						</div>
+
+  						<div class="item">
+  							<img src="http://intracitygeeks.org/wp-content/uploads/2017/03/IMG_3926-495x400.jpg" />
+
+  							
+  							
+  					</div>
+  					<!-- Buttons for carousel
+                
+  					<a class="left carousel-control" href="#MyCarousel" data-slide="prev">
+  						<span class="icon-prev"></span>
+  					</a>
+
+  					<a class="right carousel-control" href="#MyCarousel" data-slide="next">
+  						<span class="icon-next"></span>
+  					</a>
+  					-->
+  				</div>
+  			</div>
+  		</div>
+  </div>
+<script src = http://ajax.googleappis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script>
+
+
+ -->
+
+    </div>
+</body>
+</html># tributepage

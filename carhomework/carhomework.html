@@ -29,18 +29,20 @@
 
     <script>
     var peopleRented = {
-	nameAndCar: ['Kyle Mayers Economy'],
+	nameType: ['Kyle Mayers'],
+	carType:['economy'],
     };
     var cars = {
     	ecoAvail: 100,
     	midAvail: 2,
-    	price: 0,
+    	midPrice: 80,
+    	ecoPrice: 120,
     	showPrice: function() {
     		var carVal = document.getElementById("carSel").value;
     		if (carVal == "Economy") {
-    			return this.price = 80;
+    			return this.ecoPrice;
     		} else if (carVal == "Mid Size") {
-    			return this.price = 120;
+    			return this.midPrice;
     		}
     	},
     	showCarPrice: function() {
@@ -81,9 +83,10 @@
     		alert("None Of these Cars Are Available!");
     		return false;
     	} else {
-    		peopleRented.nameAndCar.push(first + ' ' + last + ' ' + cartype);
+    		peopleRented.nameType.push(first + ' ' + last);
+    		peopleRented.carType.push( ' ' + cartype);
     		alert('You have now rented your car!');
-    		return true
+    		return true;
     	}
     }
     

@@ -13,11 +13,10 @@
     <h1 id="businessName"></h1>
     
     <form action="/action_page.php">
-        <p>Please Enter Your Name</p>
         <input id="fName" type="text" name="fname" placeholder="First name">
         <input id="lName" type="text" name="lname" placeholder="Last name">
-        <p>Select Your Vehicle</p>
             <select onchange="showThatPrice()" id="carSel" name="cars">
+                <option disabled hidden="" selected value="none">Please Select A Vehicle</option>
                 <option value="Economy">Economy</option>
                 <option value="Mid Size">Mid Size</option>
             </select><br>
@@ -26,71 +25,81 @@
                     <h2 id="avail"></h2>
                 <p id='availNum'></p>
     </form> 
-<button id="secondBtn" onclick="confirmInfo()" type="submit">Rent Your Car!</button>
+<button id="secondBtn" onclick="confirmInfo(); minuscar();" type="submit">Rent Your Car!</button>
 
     <script>
     var peopleRented = {
-        nameAndCar: ['Kyle Mayers Economy'],
+	nameAndCar: ['Kyle Mayers Economy'],
+    };
+    var cars = {
+    	ecoAvail: 100,
+    	midAvail: 2,
+    	price: 0,
+    	showPrice: function() {
+    		var carVal = document.getElementById("carSel").value;
+    		if (carVal == "Economy") {
+    			return this.price = 80;
+    		} else if (carVal == "Mid Size") {
+    			return this.price = 120;
+    		}
+    	},
+    	showCarPrice: function() {
+    		return this.showPrice();
+    	},
+    	showAvail: function() {
+    		var carVal = document.getElementById("carSel").value;
+    		if (carVal == "Economy") {
+    			return this.ecoAvail;
+    		} else if (carVal == "Mid Size") {
+    			return this.midAvail;
+    		}
+    	},
+    	showCarAvail: function() {
+    		return this.showAvail();
+    	}
     };
     
-    var cars = {
-        ecoAvail: 100,
-        midAvail: 0,
-        price: 0,
-        
-         showPrice: function () {
-             var carVal =document.getElementById("carSel").value;
-                if ( carVal == "Economy") {
-                     return this.price = 80;
-                } 
-                else if ( carVal == "Mid Size") {
-                     return this.price = 120;
-                } },
-             showCarPrice: function() {
-                 return this.showPrice();
-             },
-             showAvail: function() {
-                 var carVal =document.getElementById("carSel").value;
-                if ( carVal == "Economy") {
-                     return this.ecoAvail;
-                } 
-                else if ( carVal == "Mid Size") {
-                     return this.midAvail;
-                } },
-            showCarAvail: function() {
-                return this.showAvail();
-            }
-         };
-                window.onload = showThatPrice();
-                
-                
-            
-            function showThatPrice () {
-                document.getElementById("priceNum").innerHTML = "$" +cars.showCarPrice();
-                 document.getElementById("price").innerHTML = "Price";
-                 document.getElementById("availNum").innerHTML = cars.showCarAvail();
-                 document.getElementById("avail").innerHTML = "Available";
-            }
-         
-           // Name and Email validation Function.
-            function confirmInfo() {
-            var first = document.getElementById("fName").value;
-            var last = document.getElementById("lName").value;
-            var cartype = document.getElementById("carSel").value;
-            var carAmount = document.getElementById('availNum').innerHTML;
-            if (first === '' || last === '' || cartype === "Select A Vehicle") {
-            alert("Please fill all fields!");
-            return false;
-            } else if (carAmount === '0') {
-            alert("None Of these Cars Are Available!");
-            return false; 
-            } else {
-            peopleRented.nameAndCar.push(first + ' ' + last + ' ' + cartype);
-            alert('You have now rented your car!');
-            return true}}
-
-             document.getElementById("businessName").innerHTML = "Kyles Automotive";
-        
+    function showThatPrice() {
+    	document.getElementById("priceNum").innerHTML = "$" + cars.showCarPrice();
+    	document.getElementById("price").innerHTML = "Price";
+    	document.getElementById("availNum").innerHTML = cars.showCarAvail();
+    	document.getElementById("avail").innerHTML = "Available";
+    }
+    // Name and Email validation Function.
+    function confirmInfo() {
+    	var first = document.getElementById("fName").value;
+    	var last = document.getElementById("lName").value;
+    	var cartype = document.getElementById("carSel").value;
+    	var carAmount = document.getElementById('availNum').innerHTML;
+    	if (first === '' || last === '') {
+    		alert("Please fill all fields!");
+    		return false;
+    	} else if (cartype == "none") {
+    		alert('Please Select A Car');
+    		return false;
+    	} else if (carAmount === '0') {
+    		alert("None Of these Cars Are Available!");
+    		return false;
+    	} else {
+    		peopleRented.nameAndCar.push(first + ' ' + last + ' ' + cartype);
+    		alert('You have now rented your car!');
+    		return true
+    	}
+    }
+    
+    function minuscar() {
+    	var cartype = document.getElementById("carSel").value;
+    	var carAmount = document.getElementById('availNum').innerHTML;
+    	if (carAmount == '0') {
+    		return false;
+    	} else if (cartype == "Mid Size") {
+    		cars.midAvail--;
+    	} else if (cartype == "Economy") {
+    		cars.ecoAvail--;
+    	}
+    	document.getElementById("availNum").innerHTML = cars.showCarAvail();
+    }
+    document.getElementById("businessName").innerHTML = "Kyles Automotive";
     </script>
 </body>
 </html>

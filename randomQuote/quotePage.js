@@ -1,3 +1,4 @@
+/*global $*/
 $(document).ready(function() {
 	var quote;
 	var author;
@@ -52,11 +53,11 @@ $(document).ready(function() {
  function changeImage() {
     $('body').css('background-image', 'url(https://fsmedia.imgix.net/9d/2c/c8/ed/b229/48a4/8afc/d997d7fc94aa/daenerys-targaryen-tyrion-lannister-and-dragonsrhaegal-and-viserion-game-of-thrones.png)');
    $('body').removeClass('class1');
-   $('body').addClass('class2'); };
+   $('body').addClass('class2')}
  function changeImageBack() {
-    $('body').css('background-image', 'url(http://www.baltana.com/files/wallpapers-5/Vintage-Background-Wallpaper-HD-16556.jpg)');
+    $('body').css('background-image', 'url(https://i.pinimg.com/originals/83/28/15/8328156f64be106b14493fe117023646.gif)');
     $('body').removeClass('class2');
-    $('body').addClass('class1'); };
+    $('body').addClass('class1'); }
     
     (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -65,4 +66,14 @@ $(document).ready(function() {
     js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
+ 
+
+$('#get-quote').on('click', function() {
+	var element = document.getElementById("quote");
+	element.classList.remove('animate');
+	element.offsetWidth = element.offsetWidth;
+	void element.offsetWidth;
+	element.classList.add('animate');
+	false;
+	});
    

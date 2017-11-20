@@ -21,7 +21,7 @@
 	background-repeat: no-repeat;
 }
 .class1 {
-	background-image: url('http://www.baltana.com/files/wallpapers-5/Vintage-Background-Wallpaper-HD-16556.jpg');
+	background-image: url('https://i.pinimg.com/originals/83/28/15/8328156f64be106b14493fe117023646.gif');
 	font-family: Timmana;
 	font-size: 30px;
 }
@@ -30,6 +30,14 @@
 	font-family: Vollkorn SC;
 	color: #FFFFFF;
 	font-size: 30px;
+}
+.animate {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 #quoteText {
 	position: absolute;
@@ -71,17 +79,13 @@ h1 {
 	bottom: 0;
 	width: 100%;
 	height: 30px;
-	/* Height of the footer */
 	background: #000000;
 	text-align: center;
 	font-size: 10px;
 	color: #FFFFFF;
     }
     .animated {
-            -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+          
          }
          
          @-webkit-keyframes fadeInRight {
@@ -106,10 +110,6 @@ h1 {
             }
          }
          
-         .fadeInRight {
-            -webkit-animation-name: fadeInRight;
-            animation-name: fadeInRight;
-         }
     </style>
 </head>
 <body>
@@ -134,8 +134,8 @@ h1 {
 
   <!-- Comment #3: Content -->
   <div class='container text-center' id='quoteText'>
-        <p class="animated fadeInRight" id="quote"></p>
-        <p class="animated fadeInRight" id="author"></p>
+        <p class="animate" id="quote"></p>
+        <p class="animate" id="author"></p>
     </div>
 
   <!-- Comment #4: Plugin Code -->

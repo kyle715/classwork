@@ -13,9 +13,9 @@
     <h1 id="businessName"></h1>
     
     <form id='ayy'>
-        <input id="fName" type="text" name="fname" placeholder="First name">
-        <input id="lName" type="text" name="lname" placeholder="Last name">
-            <select id="carSel" name="cars">
+        <input id="fName" type="text" name="fname" placeholder="First name"></input>
+        <input id="lName" type="text" name="lname" placeholder="Last name"></input>
+            <select onchange='displayInfo(this.value);' id="carSel" name="cars">
                 <option disabled hidden="" selected value="none">Please Select A Vehicle</option>
             </select><br>
                 <h2 id="price">Price</h2>
@@ -53,15 +53,15 @@
     	   selectOption.setAttribute('value', i);
     	   selectOption.innerHTML = vehicles.cars[i].name;
     	   selectOption.setAttribute('id', "car" + i);
-    	   Selector.setAttribute('onchange', `displayInfo(${i})`);
-    	   document.getElementById('carSel').appendChild(selectOption);
+    	   Selector.appendChild(selectOption);
     	}
     	
     	document.getElementById('ayy').onsubmit = function(e){
     	    event.preventDefault();
-    	    if(document.getElementById('fName') == "" || document.getElementById('lName') == "")
+    	    if(document.getElementById('fName') == "" || 
+    	    document.getElementById('lName') == ""){
     	    alert("please fill all fields");
-    	    return false;
+    	    return;}
     	};
 
 

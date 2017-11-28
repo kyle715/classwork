@@ -19,14 +19,16 @@
                             method: "GET",
                             url:"https://newsapi.org/v2/top-headlines?sources=" + source,
                             data:{apiKey:'3627f0612c5748d1842061db5487dace'},
-                            success: function(response){
+                            success: function(response, kyle){
                                 for(var i = 0; i < response.articles.length; i++){
                                     var pleaseWork = document.createElement("P");
-                                    pleaseWork.innerHTML = response.articles[i].title;
+                                    var itWorked =  document.createElement("P");
+                                    pleaseWork.innerHTML = response.articles[i].title +  "<br />" + response.articles[i].description;
                                     document.getElementById('comeOn').appendChild(pleaseWork);
+                                    pleaseWork.setAttribute('id', i);
                                 }
                             } 
-                        })
+                        });
                  
              }
                  $('#source').submit(function(e){

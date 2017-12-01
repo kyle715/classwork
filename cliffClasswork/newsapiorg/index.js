@@ -19,17 +19,24 @@
                             method: "GET",
                             url:"https://newsapi.org/v2/top-headlines?sources=" + source,
                             data:{apiKey:'3627f0612c5748d1842061db5487dace'},
-                            success: function(response, kyle){
+                            success: function(response){
+                            	document.getElementById('comeOn').innerHTML = '';
                                 for(var i = 0; i < response.articles.length; i++){
-                                    var pleaseWork = document.createElement("P");
-                                    var itWorked =  document.createElement("P");
-                                    pleaseWork.innerHTML = response.articles[i].title +  "<br />" + response.articles[i].description;
-                                    document.getElementById('comeOn').appendChild(pleaseWork);
+                                    var pleaseWork = document.createElement("UL");
+                                    var itWorked =  document.createElement("LI");
+                                    var list = document.getElementById("comeOn");
+                                    var link = document.createElement("a");
+                                    pleaseWork.innerHTML = response.articles[i].title;
+                                    itWorked.innerHTML = response.articles[i].description + "<img src='" + response.articles[i].urlToImage + "'></span>";
+                                    itWorked.setAttribute('data-target', '#comeOn');
+                                    list.appendChild(link);
+                                    link.appendChild(pleaseWork);
+                                    list.appendChild(itWorked);
                                     pleaseWork.setAttribute('id', i);
+                                    link.setAttribute('href', response.articles[i].url);
                                 }
-                            } 
+                            }
                         });
-                 
              }
                  $('#source').submit(function(e){
         event.preventDefault();

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>NewsAPI V1</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+
     <style>
     ul{
         font-size:20px;
@@ -13,12 +15,16 @@
     li {
         font-size:15px;
         color:#ecf0f1;
+        height: 200px;
     }
     body {
         background-color:#2c3e50;
     }
     h1 {
         color: #ecf0f1;
+        text-align:center;
+        font-family:Spectral SC;
+        text-decoration:underline;
     }
     #btn{
     margin: auto;
@@ -28,26 +34,103 @@
         height:150px;
         width:150px;
         position:relative;
+        float:right;
+    }
+    .sidenav {
+      height: 100%;
+      width: 200px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    #main {
+        transition: margin-left .5s;
+        padding: 20px;
+    }
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
+    /* Links inside the navbar */
+    .sidenav a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    /* The dropdown container */
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    
+    /* Dropdown button */
+    .dropbtn {
+      font-size: 16px; 
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+    }
+    
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      float: none;
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
     </style>
     
 </head>
 <body>
-    <div class="container">
-        <form id="source">
-            <div class="form-group, text-center">
-                <h1> Select a News Source to see the Top Headlines!</h1>
-                <select id="selection">
-                    
-                </select>
-            </div>
-            <button id="btn" type="submit" class="btn btn-primary center-block">Submit</button>
-        </form>
-        <div class="row">
-            <div class='col-md-6 col-md-offset-3 col-xs-12'>
-        <div id="comeOn">
+    <div id="main">
+        <div id="mySidenav" class="sidenav">
+            <div class="dropdown">
+                <button class="dropbtn">
+                </button>
+                <div id='dropdown' class="dropdown-content">
+                </div>
+             </div> 
         </div>
     </div>
+    <div class="container">
+            <div class="form-group, text-center">
+                <h1 id='header'>Select a News Source From the Side Bar to see the Top Headlines!</h1>
+            </div>
+        <div class='container' id="comeOn">
+        </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

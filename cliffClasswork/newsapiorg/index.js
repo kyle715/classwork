@@ -12,7 +12,7 @@
                 source.innerHTML = response.sources[i].name;
                 document.getElementById("dropdown").appendChild(source);
                 source.setAttribute('value',  response.sources[i].id);
-                source.setAttribute('onclick',`displayNews();`);
+                source.setAttribute('onclick',`displayNews('${response.sources[i].id}');`);
                 source.setAttribute('id', i);
              }}
         }
@@ -21,19 +21,21 @@
     });
 });
 	function displayNews(response){
-		var id = this.value;
+	    console.log(response);
+		var id = document.getElementById('0').value;
 		$.ajax({
 			method:"GET",
-			url:"https://newsapi.org/v2/top-headlines?sources=" + 'bloomberg',
-            data:{apiKey:'3627f0612c5748d1842061db5487dace'},
+			url:"https://newsapi.org/v2/top-headlines",
+            data:{sources: response, apiKey:'3627f0612c5748d1842061db5487dace'},
             success: function(response){
             	document.getElementById('comeOn').innerHTML = '';
-            	document.getElementById('header').innerHTML = 'Top ' + 'Bloomberg ' + 'Headlines';
+            	document.getElementById('header').innerHTML = 'Top ' + ' Headlines';
             	 for(var i = 0; i < response.articles.length; i++){
                     var pleaseWork = document.createElement("UL");
                     var itWorked =  document.createElement("LI");
                     var list = document.getElementById("comeOn");
                     var link = document.createElement("a");
+                 	document.getElementById('header').innerHTML = 'Top Headlines';
                     pleaseWork.innerHTML = response.articles[i].title;
                     itWorked.innerHTML = "<div><img src='" + response.articles[i].urlToImage + "'></span></div>" + '<br />' + response.articles[i].description;
                     itWorked.setAttribute('data-target', '#comeOn');
@@ -45,4 +47,8 @@
                 }
             }
 		});}
+		
+		function tryThis(){
+		    displayNews(this.value);
+		}
 		

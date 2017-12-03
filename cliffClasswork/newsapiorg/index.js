@@ -55,7 +55,3 @@ function displayNews(response) {
 		}
 	});
 }
-
-function tryThis() {
-	displayNews(this.value);
-}

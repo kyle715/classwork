@@ -1,61 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src='index.js'></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Timmana" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
-    <title>Random Quote Generator</title>
     <link rel="stylesheet" type="text/css" href="index.css">
+    <script src='index.js'></script>
+    <title>Random Quote Generator</title>
 </head>
 <body>
-    
-    <!--social media links -->
-    
-    <div style='Float:right' id='socialMedia'>
-    <p id="share">Share</p>
-  <a class="fa fa-twitter" href="#"></a><br>
-    </div>
-    
     <!-- Headline -->
     <div id='headline' class='container text-center'>
     <br>
     <br>
       <h1>Random Quotes Generator</h1>
     </div>
- 
-    <!-- quote text -->
-    
-    <div id="fb-root"></div>
-
-  <!-- Comment #3: Content -->
+  <!-- Content -->
   <div class='container text-center' id='quoteText'>
-        <p class="animate" id="quote"></p>
-        <p class="animate" id="author"></p>
+        <p id="quote"></p>
+        <p id="character"></p>
     </div>
-
+    <!-- Quote Button -->
+    <div id='quoteButton' class='container text-center'>
+  <button id="getQuote" class='btn btn-danger'>Get A Game Of Thrones Quote</button>
+  </div>
   <!-- Comment #4: Plugin Code -->
   <div class="fb-quote"></div>
-    
-    
-    
-    
-    <!-- Quote Button -->
-    
-    <div id='quoteButton' class='container text-center'>
-  <button id="get-quote" class='btn btn-success'>New Random Quote</button>
-  <button id="getGOTQuote" onclick="changeImg();" class='btn btn-danger'>Get A Game Of Thrones Quote</button>
-  </div>
-	
+  
 </body>
 </html>

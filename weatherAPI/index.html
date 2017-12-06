@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src='index.js'></script>
+    <title>Weather API</title>
 </head>
 <body>
-    
+    <!-- Headline -->
+    <div id='headline' class='container text-center'>
+    <br>
+    <br>
+      <h1>Current Weather</h1>
+    </div>
+  <!-- Content -->
+  <div class='container text-center' id='quoteText'>
+        <p id="date"></p>
+        <p id='location'></p>
+        <p id="tempeture"></p>
+    </div>
 </body>
 </html>

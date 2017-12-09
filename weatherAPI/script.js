@@ -2,7 +2,7 @@
 global $
 global navigator
 global apiKey
-*/
+*/ 
 $(document).ready(function() {
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(function(position){

@@ -1,55 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <script src='apikey.js'></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src='script.js'></script>
-    <title>Weather API</title>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+	</script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+	<script src='apikey.js'>
+	</script>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src='script.js'>
+	</script>
+	<title>Weather API</title>
 </head>
+    <!-- title -->
 <body id='body'>
-    <div class="topnav" id="myTopnav">
-     <p>Current Weather Application</p>
-    </div>
-  <!-- Content -->
-  <br>
-  <br>
-  <br>
-  <div class='container text-center styleB' id='quoteText'>
-      <h1> Current Weather</h1>
-        <p>Your City:</p><p id="city"></p> 
-        <p>tempature:</p><p id="temp"></p><p>Units:</p><p id='FC' onclick='changeTemp();'>F</p>
-        <p>What to expect Today</p><p id="weather"></p>
-        <p>Brief description of weather today:</p><p id="description"></p>
-        <div id='icon'>
-        </div>
-    </div>
-    <div>
-        <a href='http://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid=3cb920f810af921ff25538043ed1a70b'>
-        </a>
-    </div>
-    <div class='styleB container text-center'>
-        <h1> Weather for the next 12 hours in 3 Hour Intervals</h1>
-        	<div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-2 col-small-4 col-xs-4 content"><p></p></div>
-                    <div class="border col-md-2 col-small-4 col-xs-4 content"><p id='3HourDescription'>a<p id='3HourTemp'></p><br><p id='3HourIcon'></p></div>
-                    <div class="border col-md-2 col-small-4 col-xs-4 content"><p id='6HourDescription'>a<p id='6HourTemp'>a</p><br><p id='6HourIcon'></p></div>
-                    <div class="border col-md-2 col-small-4 col-xs-4 content"><p id='9HourDescription'>a<p id='9HourTemp'>a</p><br><p id='9HourIcon'></p></div>
-                    <div class="border col-md-2 col-small-4 col-xs-4 content"><p id='12HourDescription'>a<p id='12HourTemp'>a</p><br><p id='12HourIcon'></p></div>
-                    <div class="col-md-2 col-small-4 col-xs-4 content"><p></p></div>
-    			</div>
-    	    </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    
-     <!--  footer body -->
-			
+	<div class="topnav" id="myTopnav">
+		<p>Current Weather Application</p>
+	</div>
+	    <!-- Content -->
+	<br>
+	<br>
+	<br>
+	<div class='container text-center styleB' id='quoteText'>
+		<h1>Current Weather</h1>
+		<p>Your City:</p>
+		<p id="city"></p>
+		<p>tempature:</p>
+		<p id="temp"></p>
+		<p>Units:</p>
+		<p id='FC' onclick='changeTemp();'>F</p>
+		<p>What to expect Today</p>
+		<p id="weather"></p>
+		<p>Brief description of weather today:</p>
+		<p id="description"></p>
+		<div id='icon'></div>
+	</div>
+	<div>
+		<a href='http://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid=3cb920f810af921ff25538043ed1a70b'></a>
+	</div>
+	<!-- 12 hour weather blocks -->
+	<div class='styleB container text-center'>
+		<h1>Weather for the next 12 hours in 3 Hour Intervals</h1>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2 col-small-4 col-xs-4 content">
+					<p></p>
+				</div>
+				<div class="border col-md-2 col-small-4 col-xs-4 content">
+					<p id='3HourDescription'>a</p>
+					<p id='3HourTemp'></p><br>
+					<p id='3HourIcon'></p>
+				</div>
+				<div class="border col-md-2 col-small-4 col-xs-4 content">
+					<p id='6HourDescription'>a</p>
+					<p id='6HourTemp'>a</p><br>
+					<p id='6HourIcon'></p>
+				</div>
+				<div class="border col-md-2 col-small-4 col-xs-4 content">
+					<p id='9HourDescription'>a</p>
+					<p id='9HourTemp'>a</p><br>
+					<p id='9HourIcon'></p>
+				</div>
+				<div class="border col-md-2 col-small-4 col-xs-4 content">
+					<p id='12HourDescription'>a</p>
+					<p id='12HourTemp'>a</p><br>
+					<p id='12HourIcon'></p>
+				</div>
+				<div class="col-md-2 col-small-4 col-xs-4 content">
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</div><br>
+	<br>
+	<!--  footer body -->
 	<div class="footer">
 		*click on the "units" to change tempature from fahrenheit to celsius<br>
 		&copy; Kyle Mayers Current Weather API<br>

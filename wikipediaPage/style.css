@@ -1,0 +1,94 @@
+#searchTerm{
+    margin:0px;
+    text-indent:10px;
+}
+#inputBox{
+    height:50px;
+}
+#output {
+	color: black;
+	font-style: bold;
+	font: center;
+	padding: 20px 100px 20px 100px;
+}
+.well {
+	border: 1px;
+	border-style: solid;
+	background-color: rgba(236, 240, 241, .7);
+}
+body {
+	background: url('http://wallpapereasy.com/wp-content/uploads/2015/11/Wikipedia-3d-Hd-Wallpaper.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.title{
+    font-family:VT323;
+    font-size:35px;
+}
+.btn{
+    font-family: VT323;
+    font-size:20px;
+}
+body {
+  text-align: center;
+}
+
+input {
+  margin-top: 100px;
+  height: 50px;
+  width: 200px;
+}
+
+.inputBox {
+  height: 300px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.bar1,
+.bar2 {
+  transition-timing-function: ease-in-out;
+  transition: all .1s;
+  height: 5px;
+  width: 4px;
+  background-color: black;
+  position: relative;
+  display: inline-block;
+  top: 8px;
+}
+
+.bar1 {
+  left: -30px;
+  transform: rotate(45deg);
+}
+
+.bar2 {
+  left: -37px;
+  transform: rotate(-45deg);
+}
+input {
+  width:50px;
+  border: 2px solid black;
+  border-radius: 50px;
+  transition-timing-function: ease-in-out;
+  transition: all .1s;
+}
+
+*:focus {
+    outline: 0;
+}
+
+input:focus {
+  width: 200px;
+}
+
+.hide {
+  display: none;
+}
+
+.magnify {
+  top: 35px;
+  left: -5px;
+  width: 6px;
+  height: 26px;
+}

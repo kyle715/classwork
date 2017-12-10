@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+	</script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src='script.js'>
+	</script>
+	<title>Wikipedia Search</title>
+</head>
+<body>
+	<br>
+	<br>
+	<div class='container text-center'>
+		<h1 class='title'>Wikipedia Search</h1>
+		    <div id='inputBox' class="inputBox">
+                <input id='searchTerm' type='text' autocomplete='on'></input>
+                    <div class="bar1 hide"></div>
+                    <div class="bar2 magnify"></div>
+            </div>
+		<br>
+	    	<div class='container text-center'>
+		    	<button class='btn btn-success' id='search'>submit</button> <a class='btn btn-primary' href='https://en.wikipedia.org/wiki/Special:Random'>random</a>
+	    	</div>
+	</div>
+	<div id='output'></div>
+</body>
+</html>

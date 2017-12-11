@@ -13,7 +13,7 @@ $(document).ready(function() {
 				    document.getElementById('output').innerHTML = '';
 					document.getElementById('searchTerm').value = '';
 					for (var i = 0; i < data[1].length; i++) {
-						$("#output").prepend("<div><div class='well'><a href=" + data[3][i] + "><h2>" + data[1][i] + "</h2></a>" + "<p>" + data[2][i] + "</p></div></div>");
+						$("#output").prepend("<div><div class='well'><a href=" + data[3][i] + "><h2>" + data[1][i] + "</h2>" + "<p>" + data[2][i] + "</p></a></div></div>");
 					}
 				}
 			});
@@ -30,7 +30,7 @@ $(document).ready(function() {
 				document.getElementById('output').innerHTML = '';
 				document.getElementById('searchTerm').value = '';
 				for (var i = 0; i < data[1].length; i++) {
-					$('#output').prepend("<div><div class='well'><a href=" + data[3][i] + "><h2>" + data[1][i] + "</h2></a>" + "<p>" + data[2][i] + "</p></div></div>");
+					$('#output').prepend("<div><div class='well'><a href=" + data[3][i] + "><h2>" + data[1][i] + "</h2>" + "<p>" + data[2][i] + "</p></a></div></div>");
 				}
 			},
 		});

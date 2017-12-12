@@ -21,7 +21,7 @@ $(document).ready(function() {
                     document.getElementById('icon').innerHTML = '<img src="https://openweathermap.org/img/w/' + response.weather[0].icon + '.png">';
                     var weather = response.weather[0].main;
                     console.log(weather);
-                        if (weather == 'clear sky') {
+                        if (weather == 'Clear') {
                             $('body').addClass('clearSky');
                         }else if (weather == 'few clouds'){
                              $('body').addClass('fewClouds');
@@ -31,7 +31,7 @@ $(document).ready(function() {
                              $('body').addClass('brokenClouds');
                         }else if (weather == 'shower rain'){
                              $('body').addClass('showerRain');
-                        }else if (weather == 'rain'){
+                        }else if (weather == 'Rain'){
                              $('body').addClass('rain');
                         }else if (weather == 'thunderstorm'){
                              $('body').addClass('thunderstorm');
@@ -39,6 +39,8 @@ $(document).ready(function() {
                             $('body').addClass('snow');
                         }else if (weather == 'mist'){
                              $('body').addClass('mist');
+                        }else if (weather == 'Clouds'){
+                             $('body').addClass('Clouds');
                         }
                 }
             });

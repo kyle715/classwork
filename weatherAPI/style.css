@@ -22,6 +22,14 @@
 	color: white;
 	font-weight: bold;
 }
+.Clouds {
+	background-image: url(https://acadiansoul.files.wordpress.com/2012/08/eagle-lake-and-bubble-pond-july-12-032.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	color: white;
+	font-weight: bold;
+}
 .scatteredClouds {
 	background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/b9/Scattering_of_clouds.jpg);
 	background-repeat: no-repeat;
@@ -47,7 +55,7 @@
 	font-weight: bold;
 }
 .rain {
-	background-image: url(https://static.pexels.com/photos/8486/water-rain-raindrops-drops.jpg);
+	background-image: url(https://images1.laweekly.com/imager/u/original/6805032/delin_-_lacma_rain_room_drops.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;

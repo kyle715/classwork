@@ -3,14 +3,39 @@
 	width: 450px;
 }
 .content {
-    padding:0px;
+    padding:10px;
     position: static;
-    width:30px;
-    height:30px;
+    border-left: 2px;
+    border-right:2px;
+    border-top:2px;
+    border-bottom: 2px;
+    border-style:solid;
+}
+
+.btn:hover {
+  box-shadow: 0 0 3px 2px rgba(240, 120, 120, 0.6);
 }
 #table{
-    width:450px;
+    width:453px;
+    height:75px;
+    border: 2px;
+    border-style:solid;
+    text-align:right;
+    background-color: #FFFFFF;
 }
 body {
     background-color:rgba(52, 73, 94,1.0);
+}
+#calc{
+    width:50%;
+    height:50%;
+    margin-left:0px;
+    margin-right:0px;
+}
+#function {
+    height:30px;
+    width:120px;
+    padding:10px;
+    position: static;
+    margin:5px;
 }

@@ -119,6 +119,7 @@ $('#btnC').on('click', function() {
 $('#btnCE').on('click', function() {
 	sum = [];
 	document.getElementById('table').value = '';
+	document.getElementById('function').innerHTML = '';
 });
 $('#btnEqual').on('click', function() {
 	var memory = document.getElementById('table').value;

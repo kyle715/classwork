@@ -1,12 +1,10 @@
-
-function fearNotLetter(str) {
-  for ( var i = 0; i <str.length; i++){
-    var firstLetter = str.charCodeAt(i);
-    if (firstLetter !== str.charCodeAt(0) + i){
-      return String.fromCharCode(firstLetter - 1);
-    }
+function sumAll(arr) {
+  var out = 0;
+  for (var i = Math.min(...arr); i <= Math.max(...arr); i++) {
+    out += i;
   }
-  return undefined;
+  return out;
 }
 
-fearNotLetter("abce");
+sumAll([1, 4]);
+

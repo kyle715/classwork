@@ -1,21 +1,19 @@
-function chunkArrayInGroups(arr, size) {
+var convertToRoman = function(num) {
 
-  var temp = [];
-  var result = [];
+  var decimalValue = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ];
+  var romanNumeral = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ];
 
-  for (var a = 0; a < arr.length; a++) {
-    if (a % size !== size - 1)
-      temp.push(arr[a]);
-    else {
-      temp.push(arr[a]);
-      result.push(temp);
-      temp = [];
+  var romanized = '';
+
+  for (var index = 0; index < decimalValue.length; index++) {
+    while (decimalValue[index] <= num) {
+      romanized += romanNumeral[index];
+      num -= decimalValue[index];
     }
   }
 
-  if (temp.length !== 0)
-    result.push(temp);
-  return result;
+  return romanized;
 }
 
-chunkArrayInGroups(["a", "b", "c", "d"], 2);
+// test here
+convertToRoman(36);

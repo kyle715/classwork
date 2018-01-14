@@ -1,19 +1,15 @@
-var convertToRoman = function(num) {
 
-  var decimalValue = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ];
-  var romanNumeral = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ];
+function whatIsInAName(collection, source) {
+  var srcKeys = Object.keys(source);
 
-  var romanized = '';
-
-  for (var index = 0; index < decimalValue.length; index++) {
-    while (decimalValue[index] <= num) {
-      romanized += romanNumeral[index];
-      num -= decimalValue[index];
+  return collection.filter(function (obj) {
+    for(var i = 0; i < srcKeys.length; i++) {
+      if(!obj.hasOwnProperty(srcKeys[i]) || obj[srcKeys[i]] !== source[srcKeys[i]]) {
+        return false;
+      }
     }
-  }
-
-  return romanized;
+    return true;
+  });
 }
 
-// test here
-convertToRoman(36);
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });

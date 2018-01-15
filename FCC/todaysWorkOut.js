@@ -1,15 +1,21 @@
+var express = require('express');
+var app = express();
 
-function whatIsInAName(collection, source) {
-  var srcKeys = Object.keys(source);
+var cities = ['Caspiana', 'Indigo', 'Paradise'];
+app.get('/cities', function (request, response){
+  if(request.query.search) {
+    response.json(citySearch(request.query.search));
+  }
+});
 
-  return collection.filter(function (obj) {
-    for(var i = 0; i < srcKeys.length; i++) {
-      if(!obj.hasOwnProperty(srcKeys[i]) || obj[srcKeys[i]] !== source[srcKeys[i]]) {
-        return false;
-      }
-    }
-    return true;
+
+function citySearch (keyword) {
+  var regexp = RegExp(keyword, 'i');
+  var result = cities.filter(function (city) {
+    return city.match(regexp);
   });
+
+  return result;
 }
 
-whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+app.listen(3000);

@@ -1,21 +1,10 @@
-var express = require('express');
-var app = express();
-
-var cities = ['Caspiana', 'Indigo', 'Paradise'];
-app.get('/cities', function (request, response){
-  if(request.query.search) {
-    response.json(citySearch(request.query.search));
+function myReplace(str, before, after) {
+  var index = str.indexOf(before);
+  if (str[index] === str[index].toUpperCase()) {
+    after = after.charAt(0).toUpperCase() + after.slice(1);
   }
-});
+  str = str.replace(before, after);
 
-
-function citySearch (keyword) {
-  var regexp = RegExp(keyword, 'i');
-  var result = cities.filter(function (city) {
-    return city.match(regexp);
-  });
-
-  return result;
+  return str;
 }
-
-app.listen(3000);
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");

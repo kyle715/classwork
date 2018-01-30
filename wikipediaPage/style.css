@@ -18,8 +18,9 @@
 }
 body {
 	background: url('http://wallpapereasy.com/wp-content/uploads/2015/11/Wikipedia-3d-Hd-Wallpaper.jpg');
+	height:auto;
+	width:100%;
 	background-repeat: no-repeat;
-	background-size: cover;
 }
 .title{
     font-family:VT323;

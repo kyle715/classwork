@@ -1,0 +1,27 @@
+ul {
+    Font-size: 30px;
+    font-family: Ewert;
+    color: #FFFFFF;
+}
+li {
+    font-size: 15px;
+    color: #FFFFFF;
+    font-family: medula one;
+}
+.bigShot {
+    font-family: Ewert;
+    font-size: 80px;
+    color: #FFFFFF;
+}
+.drinks {
+    font-family: Ewert;
+    font-size: 80px;
+    color: #FFFFFF;
+}
+body {
+    background-color: #000000;
+}
+.shots {
+    color: #FFFFFF;
+    font-size: 30px;
+}

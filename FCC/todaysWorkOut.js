@@ -134,7 +134,7 @@ char* readline() {
     return data;
 }
 
-char** split_string(char* str) {
+// char** split_string(char* str) {
     char** splits = NULL;
     char* token = strtok(str, " ");
 
